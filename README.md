@@ -1,8 +1,8 @@
 # AI Prompting Power User
 
-Turn rough requirements into copy-ready, high-quality prompts for AI agents.
+Turn rough requirements into copy-ready, high-quality prompts for Claude Code, Codex, OpenClaw, and other AI agents.
 
-This OpenClaw/Codex skill transforms vague ideas into executable prompt specifications with clear context, workflow, critique behavior, output format, validation rules, and handoff requirements.
+This Claude Code / Codex / OpenClaw skill transforms vague ideas into executable prompt specifications with clear context, workflow, critique behavior, output format, validation rules, and handoff requirements.
 
 Most prompt libraries give you static templates. This skill acts more like a prompt architect: it reconstructs the real task, chooses the right prompt pattern, adds operational constraints, and produces a copy-ready Agent Prompt Pack that another AI agent can execute with less ambiguity.
 
@@ -18,7 +18,7 @@ Most prompt libraries give you static templates. This skill acts more like a pro
 ## Who It Is For
 
 - Founders and operators who need to turn rough business or product ideas into executable AI-agent tasks.
-- Engineers who want better prompts for Claude Code, Codex, Cursor, ChatGPT, or other coding agents.
+- Engineers who want better prompts for Claude Code, Codex, OpenClaw, Cursor, ChatGPT, or other coding agents.
 - Researchers and analysts who need grounded reports with citations, uncertainty, and clear evidence boundaries.
 - Prompt builders who want a structured way to move beyond one-line prompt tricks.
 
@@ -42,7 +42,7 @@ The skill usually produces:
 
 ## Install
 
-Copy this repository into your OpenClaw skills directory:
+### OpenClaw
 
 ```bash
 mkdir -p ~/.openclaw/skills
@@ -50,7 +50,29 @@ git clone https://github.com/Richchen-maker/ai-prompting-power-user.git ~/.openc
 openclaw skills check
 ```
 
-If your environment uses Codex skills, place the same directory under your configured skills path and restart the agent session.
+### Claude Code
+
+Claude Code can use this repository as a project instruction package or as reusable prompt material.
+
+Recommended project setup:
+
+```bash
+git clone https://github.com/Richchen-maker/ai-prompting-power-user.git
+cd ai-prompting-power-user
+claude
+```
+
+Then ask Claude Code:
+
+```text
+Read SKILL.md and references/*.md. Use this skill to convert my rough requirement into a Claude Code-ready prompt with quality commands, plan gate, verification steps, and final report format.
+```
+
+For a persistent Claude Code workflow, copy the relevant instructions from `SKILL.md` into your project's `CLAUDE.md`, or reference this repository from your project docs.
+
+### Codex
+
+If your environment uses Codex skills, place this directory under your configured skills path and restart the agent session.
 
 ## Files
 
@@ -58,11 +80,12 @@ If your environment uses Codex skills, place the same directory under your confi
 - `references/framework.md` — underlying prompting framework.
 - `references/templates.md` — reusable prompt templates.
 - `references/examples.md` — example transformations.
+- `agents/claude-code.yaml` — optional Claude Code metadata.
 - `agents/openai.yaml` — optional agent metadata.
 
 ## Usage
 
-Ask your agent to use `ai-prompting-power-user` when you need to improve or generate a prompt, for example:
+Ask Claude Code, Codex, OpenClaw, or another agent to use `ai-prompting-power-user` when you need to improve or generate a prompt, for example:
 
 ```text
 帮我把这个需求升级成一个可复制给 Claude Code 的高质量 prompt：
@@ -153,6 +176,7 @@ Good final prompt behavior: the agent does not design an oversized platform; it 
 │   ├── templates.md
 │   └── examples.md
 ├── agents/
+│   ├── claude-code.yaml
 │   └── openai.yaml
 ├── README.md
 ├── LICENSE

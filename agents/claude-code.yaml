@@ -1,0 +1,11 @@
+name: ai-prompting-power-user
+runtime: claude-code
+description: Turn rough requirements into Claude Code-ready prompts with quality commands, plan gates, verification steps, and final report requirements.
+entrypoint: ../SKILL.md
+references:
+  - ../references/framework.md
+  - ../references/templates.md
+  - ../references/examples.md
+recommended_usage: |
+  Read SKILL.md and references/*.md. Use this skill to convert the user's rough requirement into a Claude Code-ready prompt.
+  Include Claude Code quality commands, a plan-first gate, minimal change scope, verification steps, review/self-check commands, and a final quality-command execution record.

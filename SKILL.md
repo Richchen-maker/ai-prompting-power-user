@@ -7,7 +7,7 @@ description: Transform a raw idea, vague requirement, or rough user need into a 
 
 ## Purpose
 
-Convert the user's rough requirement into a **copy-ready Agent Prompt Pack** that another intelligent agent can execute, verify, challenge, and hand off with high-quality results. In Chinese terms: upgrade raw needs into **可执行、可验证、可反驳、可交接**的 Agent Prompt 规格书.
+Convert the user's rough requirement into a **copy-ready Agent Prompt Pack** for Claude Code, Codex, OpenClaw, or another intelligent agent to execute, verify, challenge, and hand off with high-quality results. In Chinese terms: upgrade raw needs into **可执行、可验证、可反驳、可交接**的 Agent Prompt 规格书.
 
 Fuse four operating systems:
 
