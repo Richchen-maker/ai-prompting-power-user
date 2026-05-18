@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Prompting Power User"
+  short_description: "Turn raw needs into elite agent prompts."
+  default_prompt: "Use this skill to turn my rough requirement into a copy-ready high-quality prompt for another AI agent, including context, workflow, critique, output format, and validation."
